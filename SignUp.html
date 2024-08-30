@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+</script>
+
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+            <button type="button" class="btn" onclick="login()">Login</button>
+            <p id="error" class="error-message"></p>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Perform client-side validation
+            if (username === 'admin' && password === 'password') {
+                // Successful login
+                window.location.href = 'index.html'; // Redirect to dashboard page
+            } 
+
+            
+
+
+            else {
+                // Display error message
+                document.getElementById('error').textContent = 'Invalid username or password';
+            }
+            
+        }
+    </script>
+<button onclick="goBack()" class="back-btn">Back</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+    
+</body>
+</html>
